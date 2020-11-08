@@ -16,6 +16,7 @@
     <hr/>
     <h2 style="color:grey; text-align: justify;"> Expense Summary </h2>
     <table>
+        <table border = "5">
         <tr>
             <th>Date</th>
             <th>Item</th>
@@ -23,15 +24,15 @@
             <th>Store</th>
             <th>Category</th>   
         </tr>
-        <tr>
             {% for entry in transactions %}
+        <tr>
             <td>{{ entry.date }}</td>
             <td>{{ entry.item }}</td>
             <td>{{ entry.cost }}</td>
             <td>{{ entry.store }}</td>
             <td>{{ entry.category }}</td>
-            {% endfor %}
         </tr>
+            {% endfor %}
     </table>
     <!-- insert expense summary here  -->
     <br>
