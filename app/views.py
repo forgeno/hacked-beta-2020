@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.http import HttpResponseRedirect
 
-from .models import expenseTracker
+from .models import Expense
 
 
 def index(request):
@@ -38,6 +38,6 @@ def saveExpense(request):
         except Exception:
             return None
 
-        createdObject = expenseTracker.objects.create(date, name, amount, store, category)  #created an object and store those attirbutes
+        createdObject = Expense.objects.create(date, name, amount, store, category)  #created an object and store those attirbutes
         createdObject.save()    # saved the object
     

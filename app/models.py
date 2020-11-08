@@ -10,6 +10,13 @@ class Expense(models.Model):
     
     def __repr__(self):
         return f"Date: {self.date} Item: {self.item} Cost: {self.cost} Store: {self.store} Category: {self.category}"
+    
+    @classmethod
+    def Create(cls, date, item, cost, store, category):
+        expense = cls(date, item, cost, store, category)
+        return expense
+
+            
 # class BudgetInfo(models.Model):
 
 #     userBudget = models.IntegerField()
