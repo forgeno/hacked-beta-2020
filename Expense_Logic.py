@@ -5,9 +5,20 @@ Expense Logic
 Author: Joseph Latina
 
 """
+from app.models import Expense
 
-import openpyxl
+#user is the dictionary data from user
+Table = Expense(user[0],user[1],user[2],user[3],user[4])
+Table.create()
+Table.save()
 
+def summary_category(category):
+    entries = Table.objects.all(category=category)
+    pass
+
+entry = Table.objects.get(category=category)
+"""
+OLD LOGIC
 #menu
 def menu():
     #starting parameters
@@ -31,10 +42,6 @@ def menu():
         elif choice == "2":
             pass
         elif choice == "3":
-            """"
-            row = list(map(str, input("Enter transaction details to be deleted: ").split()))
-            delete = Transaction(row[0],row[1],row[2],row[3],row[4])
-            """
             pass
         elif choice == "4":
             pass 
@@ -46,7 +53,7 @@ def menu():
             print("Goodbye")
             break
     
-"""Transactions"""
+
 #adding data
 class Transaction:
     
@@ -98,7 +105,7 @@ class Table:
         pass
     
 def create():
-    """Create Layout"""
+    
     #create worksheet
     wb = openpyxl.Workbook()
     sheet = wb.active
@@ -128,5 +135,5 @@ def load_file():
 #modify data
 #delete data
 #print data
+"""
 
-menu()
