@@ -6,7 +6,9 @@ from django.http import HttpResponseRedirect
 from .models import Expense
 
 def home(request):
-    return render(request, 'homepage.html')
+    table = Expense.objects.all()
+    table_dict = {'transactions': table}
+    return render(request, 'homepage.html',table_dict)
 
 def addExpense(request):
     return render(request, 'addExpense.html')
