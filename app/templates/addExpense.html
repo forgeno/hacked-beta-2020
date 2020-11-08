@@ -6,41 +6,51 @@
     <title>Add Expense</title>
     <link rel="stylesheet" href="input_align.css">
 
+<style>
+div {text-align:center}
+</style>
+
 </head>
 <body>
 
     <h1 style="background-color:powderblue; text-align:center; font-size:400%; font-family:verdana;">ADD EXPENSE</h1>
-    <form action="/app/saveExpense" method="POST">
-    <!-- {%csrf_token%} -->
+   <!-- <div action="/action_page.php" method="get"> -->
+
+<div>
+
     <label for="amount">Amount:</label>
     <input type="text" id="amount" name="amount"><br><br>
 
     <label for="item">Item:</label>
     <input type="text" id="item" name="item"><br><br>
 
-
     <label for="store">Store:</label>
-    <input type="text" id="store" name="store"><br><br>
+    <input type="text" id="store" name="store_"><br><br>
 
+    <form action="/action_page.php">
     <label for="category">Category:</label>
-    <input type="text" id="category" name="category"><br><br>
+    <select name="category" id="category" >
+
+        <option value="food_dining">Food & Dining</option>
+        <option value="shopping">Shopping</option>
+        <option value="bills_utilities">Bills & Utilities</option>
+        <option value="persona_care">Personal Care</option>
+        <option value="education">Education</option>
+
+    </select>
+  <br><br>
+
+    </form>
 
 
-    <label for="date">Date:</label>
-    <input type="date" id="date" name="date">
-        <br><br>
-
-  <p>
-  <!-- <button type="save">Save</button> -->
-  <input type="submit" value="Save">
-  </p>
-
-  </form>
+  <label for="date">Date:</label>
+  <input type="date" id="date" name="date"><br><br>
 
 
+  <button type="save">Save</button>
+
+</div>
 
 </body>
 </html>
-
-
 
