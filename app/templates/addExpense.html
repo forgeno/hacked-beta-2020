@@ -17,17 +17,16 @@ div {text-align:center}
    <!-- <div action="/action_page.php" method="get"> -->
 
 <div>
-
-    <label for="amount">Amount:</label>
+    <form action="saveExpense" method="POST">
+    <label for="amount">Cost:</label>
     <input type="text" id="amount" name="amount"><br><br>
 
     <label for="item">Item:</label>
     <input type="text" id="item" name="item"><br><br>
 
     <label for="store">Store:</label>
-    <input type="text" id="store" name="store_"><br><br>
+    <input type="text" id="store" name="store"><br><br>
 
-    <form action="/action_page.php">
     <label for="category">Category:</label>
     <select name="category" id="category" >
 
@@ -37,20 +36,17 @@ div {text-align:center}
         <option value="persona_care">Personal Care</option>
         <option value="education">Education</option>
 
-    </select>
-  <br><br>
-
+    </select> <br><br>
+    
+    <label for="date">Date:</label>
+    <input type="date" id="date" name="date"><br>
+    
   <p>
   <!-- <button type="save">Save</button> -->
   <input type="submit" value="Save"> <a href='homepage'><button type="button">Back</button></a>
+  s</form> 
   </p>
-
-
-  <label for="date">Date:</label>
-  <input type="date" id="date" name="date"><br><br>
-
-
-  <button type="save">Save</button>
+ 
 
 </div>
 
