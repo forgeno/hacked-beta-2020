@@ -4,7 +4,6 @@ from django.http import HttpResponseRedirect
 
 from .models import Expense
 
-
 def index(request):
     return render(request, 'index.html')
 
@@ -40,5 +39,3 @@ def saveExpense(request):
 
         createdObject = Expense.objects.create(date, name, amount, store, category)  #created an object and store those attirbutes
         createdObject.save()    # saved the object
-    
-
