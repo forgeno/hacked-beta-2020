@@ -17,7 +17,9 @@ def page2(request):
     return render(request, 'page2.html')
 
 def returnHome(request):
-    return render(request, 'homepage.html')
+    table = Expense.objects.all()
+    table_dict = {'transactions': table}
+    return render(request, 'homepage.html',table_dict)
 
 def saveExpense(request):
     if request.method == 'POST':
@@ -51,5 +53,8 @@ def saveExpense(request):
         createdObject = Expense.Create(date, name, amount, store, category)  #created an object and store those attirbutes
         createdObject.save()    # saved the object
         print("okay it reached here")
-    return render(request, 'homepage.html')
+    
+        table = Expense.objects.all()
+        table_dict = {'transactions': table}
+        return render(request, 'homepage.html',table_dict)
 
