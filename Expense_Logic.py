@@ -5,16 +5,22 @@ Expense Logic
 Author: Joseph Latina
 
 """
-from app.models import Expense
+from .models import Expense
 
-#user is the dictionary data from user
-Table = Expense(user[0],user[1],user[2],user[3],user[4])
-Table.create()
-Table.save()
+"""Extract Data from Database to Python"""
+#using id number as an attribute, it will be passed as an attribute to extract all the data from it
+extracted_data = Expense.objects.all()
+
 
 def summary_category(category):
-    entries = Table.objects.all(category=category)
+    transactions = Expense.objects.all(category=category)
+    
     pass
+    
+    
+    
+    
+    
 
 entry = Table.objects.get(category=category)
 """
