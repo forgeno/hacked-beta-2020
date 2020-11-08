@@ -7,6 +7,7 @@ app_name = 'Expense Tracker'
 urlpatterns = [
     path('', views.home, name ='home'),
     path('addExpense', views.addExpense, name ='addExpense'),
-    path('saveExpense', csrf_exempt(views.saveExpense), name = 'saveExpense')
-
+    path('saveExpense', csrf_exempt(views.saveExpense), name = 'saveExpense'),
+    path('page2', views.page2, name = 'page2'),
+    path('homepage', views.returnHome, name = 'returnHome')
 ]

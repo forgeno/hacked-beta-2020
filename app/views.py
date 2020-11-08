@@ -11,6 +11,12 @@ def home(request):
 def addExpense(request):
     return render(request, 'addExpense.html')
 
+def page2(request):
+    return render(request, 'page2.html')
+
+def returnHome(request):
+    return render(request, 'homepage.html')
+
 def saveExpense(request):
     if request.method == 'POST':
         try: 
