@@ -41,3 +41,4 @@ def saveExpense(request):
         createdObject = expenseTracker.objects.create(date, name, amount, store, category)  #created an object and store those attirbutes
         createdObject.save()    # saved the object
     
+
