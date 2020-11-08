@@ -11,7 +11,7 @@
 
     <h1 style="background-color:powderblue; text-align:center; font-size:400%; font-family:verdana;">ADD EXPENSE</h1>
     <form action="/app/saveExpense" method="POST">
-
+    <!-- {%csrf_token%} -->
     <label for="amount">Amount:</label>
     <input type="text" id="amount" name="amount"><br><br>
 
@@ -20,7 +20,7 @@
 
 
     <label for="store">Store:</label>
-    <input type="text" id="store" name="store_"><br><br>
+    <input type="text" id="store" name="store"><br><br>
 
     <label for="category">Category:</label>
     <input type="text" id="category" name="category"><br><br>

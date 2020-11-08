@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.http import HttpResponseRedirect
 
+
 from .models import Expense
 
 def index(request):
@@ -23,7 +24,7 @@ def saveExpense(request):
             return None
         print('2')
         try:
-            amount = request.POST.get('amount')
+            amount = int(request.POST.get('amount'))
         except Exception:
             return None
         print('3')
@@ -38,7 +39,9 @@ def saveExpense(request):
             return None
         print('5')
         #date item cost store category
+        print("{},{},{},{},{}".format(date, name, amount, store, category))
         createdObject = Expense.Create(date, name, amount, store, category)  #created an object and store those attirbutes
         createdObject.save()    # saved the object
+        print("okay it reached here")
     return render(request, 'index.html')
 
