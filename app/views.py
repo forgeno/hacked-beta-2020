@@ -11,7 +11,7 @@ def addExpense(request):
     return render(request, 'addExpense.html')
 
 def saveExpense(request):
-    if request.method == 'GET':
+    if request.method == 'POST':
         try: 
             store = request.POST.get('store')
         except ValueError:
@@ -38,7 +38,7 @@ def saveExpense(request):
             return None
         print('5')
         #date item cost store category
-        createdObject = Expense.Create(store, amount, cost, store, category)  #created an object and store those attirbutes
+        createdObject = Expense.Create(date, name, amount, store, category)  #created an object and store those attirbutes
         createdObject.save()    # saved the object
     return render(request, 'index.html')
 
