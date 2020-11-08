@@ -5,8 +5,7 @@ from . import views
 
 app_name = 'Expense Tracker'
 urlpatterns = [
-    #home page
-    path('', views.index, name ='index'),
+    path('', views.home, name ='home'),
     path('addExpense', views.addExpense, name ='addExpense'),
     path('saveExpense', csrf_exempt(views.saveExpense), name = 'saveExpense')
 
