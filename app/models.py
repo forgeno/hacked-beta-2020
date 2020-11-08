@@ -13,7 +13,7 @@ class Expense(models.Model):
     
     @classmethod
     def Create(cls, date, item, cost, store, category):
-        expense = cls(date, item, cost, store, category)
+        expense = cls(date = date, item = item, cost = cost, store = store, category = category)
         return expense
 
             
