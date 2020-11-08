@@ -24,7 +24,7 @@
             <th>Store</th>
             <th>Category</th>   
         </tr>
-            {% for entry in transactions %}
+        {% for entry in transactions %}
         <tr>
             <td>{{ entry.date }}</td>
             <td>{{ entry.item }}</td>
@@ -32,7 +32,7 @@
             <td>{{ entry.store }}</td>
             <td>{{ entry.category }}</td>
         </tr>
-            {% endfor %}
+        {% endfor %}
     </table>
     <!-- insert expense summary here  -->
     <br>
